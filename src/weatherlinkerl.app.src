@@ -1,0 +1,13 @@
+{application, weatherlinkerl,
+ [
+  {description, ""},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib,
+                  ibrowse
+                 ]},
+  {mod, { weatherlinkerl_app, []}},
+  {env, []}
+ ]}.
