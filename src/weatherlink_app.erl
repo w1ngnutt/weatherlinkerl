@@ -1,10 +1,6 @@
--module(weatherlinkerl_app).
+-module(weatherlink_app).
 
 -behaviour(application).
-
--ifdef(TEST).
--include_lib("eunit/include/eunit.hrl").
--endif.
 
 %% Application callbacks
 -export([start/0, start/2, stop/1]).
@@ -14,7 +10,7 @@
 %% ===================================================================
 
 start(_StartType, _StartArgs) ->
-    weatherlinkerl_sup:start_link().
+    weatherlink_sup:start_link().
 
 stop(_State) ->
     ok.
@@ -24,14 +20,16 @@ stop(_State) ->
 %% ===================================================================
 
 start() ->
-    ok = application:start(ibrowse),   
-    ok = application:start(weatherlinkerl).
+    OK = application:start(inets),
+    OK = application:start(weatherlink),
+    OK.
 
 %% start unit tests
 -ifdef(TEST).
+-include_lib("eunit/include/eunit.hrl").
 
 simple_test() ->
-    ok = application:start(weatherlinkerl),
-    ?assertNot(undefined == whereis(weatherlinkerl_sup)).
+    ok = start(),
+    ?assertNot(undefined == whereis(weatherlink_sup)).
 
 -endif.

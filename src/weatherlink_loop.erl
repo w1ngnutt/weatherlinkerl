@@ -1,4 +1,4 @@
--module(weatherlinkerl_loop).
+-module(weatherlink_loop).
 
 -export([
         print_sample/0,
@@ -15,7 +15,7 @@
         rainfall/1
     ]).
 
--include("weatherlinkerl.hrl").
+-include("weatherlink.hrl").
 
 -define(DMP_PKT_LENGTH, 52).
 
@@ -30,12 +30,6 @@ open_sample() ->
 
 close_sample(IO) ->
     file:close(IO).
-
-%% reads the first byte from the samples. Docs don't mention this byte for web
-%% protocol. When reading from a serial device first byte would be a page #.
-% read_page(IO) ->
-%     {ok, Byte} = file:read(IO, 1),
-%     Byte.
 
 read_packet(IO) ->
     case file:read(IO, ?DMP_PKT_LENGTH) of
@@ -67,8 +61,6 @@ print_packets(IO, P) ->
     print_packets(IO, read_packet(IO)).
 
 print_packets(IO) ->
-    % P=read_page(IO),
-    % io:format("Page: ~w\n", [P]),
     print_packets(IO, read_packet(IO)).
 
 type(Pkt) ->

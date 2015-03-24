@@ -1,4 +1,4 @@
--module(weatherlinkerl_sup).
+-module(weatherlink_sup).
 
 -behaviour(supervisor).
 

@@ -5,6 +5,7 @@
 .eunit/
 .rebar/
 ebin/
+deps/
 
 deps/ibrowse/
 deps/reloader/
