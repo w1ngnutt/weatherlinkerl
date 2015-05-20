@@ -175,12 +175,20 @@ row(Body, I) ->
 
 %% non exported helpers
 to_float(S) ->
-    {F, _} = string:to_float(?STR(S)),
-    F.
+    case string:to_float(?STR(S)) of
+        {error, _Error} ->
+            0.0;
+        {F, _Rest} ->
+            F
+    end.
 
 to_int(S) ->
-    {F, _} = string:to_integer(?STR(S)),
-    F.
+    case string:to_integer(?STR(S)) of
+        {error, _Error} ->
+            0;
+        {I, _Rest} ->
+            I
+    end.
 
 
 %% start unit tests
