@@ -6,6 +6,7 @@
 .rebar/
 ebin/
 deps/
+_build/
 
 deps/ibrowse/
 deps/reloader/

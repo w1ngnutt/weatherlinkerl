@@ -18,7 +18,7 @@
 -include("weatherlink.hrl").
 
 -define(sample1, lists:flatten(code:priv_dir(?APP) ++ "/summary-sample.html")).
--define(sample2, lists:flatten(code:priv_dir(?APP) ++ "/summary-sample-no-alarm.html")).
+-define(sample2, lists:flatten(code:priv_dir(?APP) ++ "/summary-sample-alarm.html")).
 
 -define(weather_table_xpath, "//body/div/div/table/tr[4]/td/table/tr[1]/td/table/tr[~b]/td/text()").
 -define(weather_table_row(X), lists:flatten(io_lib:format(?weather_table_xpath, [X]))).
@@ -73,7 +73,7 @@
 
 % Inside | Outside | Rain | Extra
 % alarms    //body/div/div/table/tr[4]/td/table/tr[1]/td/table/tr[40]/td/text()
--define(alarms_row, 40).
+-define(alarms_row, 48).
 
 
 
