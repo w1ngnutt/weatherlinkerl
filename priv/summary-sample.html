@@ -13,19 +13,19 @@
 <meta name="Author" content="Andy Schmidt, Jeremaih Jeffress">
 <meta name="Robots" content="All">
 <meta name="Content-Language" content="English">
-<meta name="Copyright" content="&copy; 2015 Davis Instruments">
+<meta name="Copyright" content="&copy; 2016 Davis Instruments">
 
 <link type="image/x-icon" href="/favicon.ico" rel="Shortcut Icon">
 <link type="text/css" href="/lib/css/wl2.css" rel="stylesheet">
 <link type="text/css" href="/lib/css/colorbox.css" rel="stylesheet">
 <link type="text/css" href="/lib/css/jquery-ui-1.8.4.custom.css" rel="stylesheet">
 
-<script type="text/javascript" src="/lib/js/library/jquery-1.7.1.min.js?ver=20150313"></script>
-<script type="text/javascript" src="/lib/js/library/jquery-ui-1.8.17.custom.min.js?ver=20150313"></script>
+<script type="text/javascript" src="/lib/js/library/jquery-1.7.1.min.js?ver=20160225"></script>
+<script type="text/javascript" src="/lib/js/library/jquery-ui-1.8.17.custom.min.js?ver=20160225"></script>
 <script type="text/javascript" src="/lib/js/library/jquery.colorbox.js"></script>
 <script type="text/javascript" src="/lib/js/library/jquery.validate.min.js"></script>
 
-<script type="text/javascript" src="/lib/js/library/lodash.2.4.1.min.js?ver=20150313"></script>
+<script type="text/javascript" src="/lib/js/library/lodash.2.4.1.min.js?ver=20160225"></script>
 
 <script type="text/javascript" src="/lib/js/classes/Lib.js"></script>
 <script type="text/javascript" src="/lib/js/classes/FormValidator.js"></script>
@@ -53,7 +53,7 @@ var oForm = document.forms['frmUnits'];
 var iType;
 
 	iType = oForm.selUnits.options[oForm.selUnits.selectedIndex].value;
-	document.location.href = "/user/summary/index.php?view=summary&headers=1&type=" + iType;
+	document.location.href = "/user/stagpark/index.php?view=summary&headers=1&type=" + iType;
 	return;
 }
 
@@ -75,7 +75,7 @@ var iType;
 	<img src="/images/wl_top-mid.png" width="369" height="46" alt="">
 </div>
 <div style="float: left;">
-	<a href="http://www.davisnet.com/home_flash.asp" target="_blank"><img src="/images/wl_top-davis.png" width="112" height="46" alt="Davis Logo"></a>
+	<a href="http://www.davisnet.com" target="_blank"><img src="/images/wl_top-davis.png" width="112" height="46" alt="Davis Logo"></a>
 </div>
 <br clear="all" />
 
@@ -92,10 +92,10 @@ var iType;
 	<td height="25" class="NavRight">
 
 
-<a href="/user/summary/index.php?view=main&amp;headers=1">My Weather</a> |
-<a href="/user/summary/index.php?view=summary&amp;headers=1">Summary</a> |
-<a href="/user/summary/index.php?view=summary&amp;headers=0">No Headers</a> | 
-<a href="/map.php?station=summary">Map</a> |
+<a href="/user/stagpark/index.php?view=main&amp;headers=1">My Weather</a> |
+<a href="/user/stagpark/index.php?view=summary&amp;headers=1">Summary</a> |
+<a href="/user/stagpark/index.php?view=summary&amp;headers=0">No Headers</a> | 
+<a href="/map.php?station=stagpark">Map</a> |
 <a href="/login.php">Login</a>
 
 	</td>
@@ -129,8 +129,8 @@ var iType;
 		</td>
 	</tr>
 	<tr><td colspan="6"><img src="/images/spacer.gif" width="10" height="11" border="0" alt=""></td></tr>
-	<tr><td colspan="6" class="summary_station_name">Sample Vantage Pro 2</td></tr>
-	<tr><td colspan="6" class="summary_timestamp">Current Conditions as of 6:45 AM Friday, March 13, 2015</td></tr>
+	<tr><td colspan="6" class="summary_station_name">Stag Park Vantage Pro 2</td></tr>
+	<tr><td colspan="6" class="summary_timestamp">Current Conditions as of 8:30 AM Thursday, February 25, 2016</td></tr>
 	<tr><td colspan="6"><img src="/images/spacer.gif" width="10" height="11" border="0" alt=""></td></tr>
 	<tr>
 		<td width="190" class="summary_header_label">Station Summary</td>
@@ -141,74 +141,57 @@ var iType;
 	<tr><td colspan="6"><hr class="ThinLine"></td></tr>
 	<tr>
 		<td width="190" class="summary_data">Outside Temp</td>
-		<td width="170" class="summary_data">42.7 F</td>
-		<td width="100" class="summary_data">48.0 F</td>
+		<td width="170" class="summary_data">47.8 F</td>
+		<td width="100" class="summary_data">60.1 F</td>
 		<td width="100" class="summary_data">12:00 AM</td>
-		<td width="100" class="summary_data">38.9 F</td>
-		<td width="100" class="summary_data">6:08 AM</td>
+		<td width="100" class="summary_data">45.2 F</td>
+		<td width="100" class="summary_data">6:58 AM</td>
 	</tr>
 	<tr>
 		<td width="190" class="summary_data">Outside Humidity</td>
-		<td width="170" class="summary_data">68%</td>
-		<td width="100" class="summary_data">85%</td>
-		<td width="100" class="summary_data">2:54 AM</td>
-		<td width="100" class="summary_data">57%</td>
-		<td width="100" class="summary_data">12:00 AM</td>
+		<td width="170" class="summary_data">64%</td>
+		<td width="100" class="summary_data">68%</td>
+		<td width="100" class="summary_data">7:54 AM</td>
+		<td width="100" class="summary_data">56%</td>
+		<td width="100" class="summary_data">12:08 AM</td>
 	</tr>
 	<tr><td colspan="6"><hr class="ThinLine"></td></tr>
-	<tr>
-		<td width="190" class="summary_data">Inside Temp</td>
-		<td width="170" class="summary_data">40.7 F</td>
-		<td width="100" class="summary_data">47.7 F</td>
-		<td width="100" class="summary_data">12:01 AM</td>
-		<td width="100" class="summary_data">38.7 F</td>
-		<td width="100" class="summary_data">6:11 AM</td>
-	</tr>
-	<tr>
-		<td width="190" class="summary_data">Inside Humidity</td>
-		<td width="170" class="summary_data">65%</td>
-		<td width="100" class="summary_data">65%</td>
-		<td width="100" class="summary_data">6:42 AM</td>
-		<td width="100" class="summary_data">63%</td>
-		<td width="100" class="summary_data">12:00 AM</td>
-	</tr>
-	<tr><td colspan="6"><hr class="ThinLine"></td></tr>
-	<tr>
+		<tr>
 		<td width="190" class="summary_data">Heat Index</td>
-		<td width="170" class="summary_data">41.0 F</td>
-		<td width="100" class="summary_data">47.0 F</td>
+		<td width="170" class="summary_data">47.0 F</td>
+		<td width="100" class="summary_data">59.0 F</td>
 		<td width="100" class="summary_data">12:00 AM</td>
 		<td width="100" class="summary_data">&nbsp;</td>
 		<td width="100" class="summary_data">&nbsp;</td>
 	</tr>
 	<tr>
 		<td width="190" class="summary_data">Wind Chill</td>
-		<td width="170" class="summary_data">41.0 F</td>
+		<td width="170" class="summary_data">42.0 F</td>
 		<td width="100" class="summary_data">&nbsp;</td>
 		<td width="100" class="summary_data">&nbsp;</td>
-		<td width="100" class="summary_data">37.0 F</td>
-		<td width="100" class="summary_data">6:02 AM</td>
+		<td width="100" class="summary_data">40.0 F</td>
+		<td width="100" class="summary_data">4:51 AM</td>
 	</tr>
 	<tr>
 		<td width="190" class="summary_data">Dew Point</td>
-		<td width="170" class="summary_data">32.0 F</td>
-		<td width="100" class="summary_data">37.0 F</td>
-		<td width="100" class="summary_data">2:17 AM</td>
-		<td width="100" class="summary_data">31.0 F</td>
-		<td width="100" class="summary_data">4:54 AM</td>
+		<td width="170" class="summary_data">35.0 F</td>
+		<td width="100" class="summary_data">45.0 F</td>
+		<td width="100" class="summary_data">12:00 AM</td>
+		<td width="100" class="summary_data">33.0 F</td>
+		<td width="100" class="summary_data">5:34 AM</td>
 	</tr>
 	<tr><td colspan="6"><hr class="ThinLine"></td></tr>
 	<tr>
 		<td width="190" class="summary_data">Barometer</td>
-		<td width="170" class="summary_data">30.480"</td>
-		<td width="100" class="summary_data">30.507"</td>
+		<td width="170" class="summary_data">29.741"</td>
+		<td width="100" class="summary_data">29.745"</td>
+		<td width="100" class="summary_data">8:13 AM</td>
+		<td width="100" class="summary_data">29.562"</td>
 		<td width="100" class="summary_data">12:07 AM</td>
-		<td width="100" class="summary_data">30.443"</td>
-		<td width="100" class="summary_data">4:41 AM</td>
 	</tr>
 	<tr>
 		<td width="190" class="summary_data">Bar Trend</td>
-		<td width="170" class="summary_data">Rising Slowly</td>
+		<td width="170" class="summary_data">Rising Rapidly</td>
 		<td width="100" class="summary_data">&nbsp;</td>
 		<td width="100" class="summary_data">&nbsp;</td>
 		<td width="100" class="summary_data">&nbsp;</td>
@@ -217,15 +200,15 @@ var iType;
 	<tr><td colspan="6"><hr class="ThinLine"></td></tr>
 	<tr>
 		<td width="190" class="summary_data">Wind Speed</td>
-		<td width="170" class="summary_data">2 Mph</td>
-		<td width="100" class="summary_data">8 Mph</td>
-		<td width="100" class="summary_data">12:18 AM</td>
+		<td width="170" class="summary_data">10 Mph</td>
+		<td width="100" class="summary_data">37 Mph</td>
+		<td width="100" class="summary_data">3:28 AM</td>
 		<td width="100" class="summary_data">&nbsp;</td>
 		<td width="100" class="summary_data">&nbsp;</td>
 	</tr>
 	<tr>
 		<td width="190" class="summary_data">Wind Direction</td>
-		<td width="170" class="summary_data">ESE&nbsp;103&deg;</td>
+		<td width="170" class="summary_data">W&nbsp;259&deg;</td>
 		<td width="100" class="summary_data">&nbsp;</td>
 		<td width="100" class="summary_data">&nbsp;</td>
 		<td width="100" class="summary_data">&nbsp;</td>
@@ -234,7 +217,7 @@ var iType;
 	<tr><td colspan="6"><hr class="ThinLine"></td></tr>
 	<tr>
 		<td width="190" class="summary_data">12 Hour Forecast</td>
-		<td width="570" class="summary_data" colspan="5">Partly cloudy with little temperature change. </td>
+		<td width="570" class="summary_data" colspan="5">Mostly cloudy and cooler. Windy with possible wind shift to the W, NW, or N. </td>
 	</tr>
 	<tr><td colspan="6"><hr class="ThinLine"></td></tr>
 	<tr><td colspan="6"><img src="/images/spacer.gif" width="10" height="11" border="0" alt=""></td></tr>
@@ -249,8 +232,8 @@ var iType;
 	<tr><td colspan="6"><hr class="ThinLine"></td></tr>
 	<tr>
 		<td width="190" class="summary_data">Average Wind Speed</td>
-		<td width="170" class="summary_data">3.6 Mph</td>
-		<td width="100" class="summary_data">3.0 Mph</td>
+		<td width="170" class="summary_data">10.5 Mph</td>
+		<td width="100" class="summary_data">10.0 Mph</td>
 		<td width="100" class="summary_data">&nbsp;</td>
 		<td width="100" class="summary_data">&nbsp;</td>
 		<td width="100" class="summary_data">&nbsp;</td>
@@ -258,7 +241,7 @@ var iType;
 	<tr>
 		<td width="190" class="summary_data">Wind Gust Speed</td>
 		<td width="170" class="summary_data">&nbsp;</td>
-		<td width="100" class="summary_data">6.0 Mph</td>
+		<td width="100" class="summary_data">23.0 Mph</td>
 		<td width="100" class="summary_data">&nbsp;</td>
 		<td width="100" class="summary_data">&nbsp;</td>
 		<td width="100" class="summary_data">&nbsp;</td>
@@ -278,9 +261,9 @@ var iType;
 		<td width="190" class="summary_data">Rain</td>
 		<td width="170" class="summary_data">0.00"/Hour</td>
 		<td width="100" class="summary_data">0.00"</td>
-		<td width="100" class="summary_data">0.00"</td>
-		<td width="100" class="summary_data">0.59"</td>
-		<td width="100" class="summary_data">0.59"</td>
+		<td width="100" class="summary_data">0.35"</td>
+		<td width="100" class="summary_data">7.93"</td>
+		<td width="100" class="summary_data">61.88"</td>
 	</tr>
 	<tr>
 		<td width="190" class="summary_data">Last Hour Rain</td>
@@ -292,23 +275,66 @@ var iType;
 	</tr>
 	<tr><td colspan="6"><hr class="ThinLine"></td></tr>
 
-
-	<!-- START: ALARM CONDITIONS -->
 	<tr><td colspan="6"><img src="/images/spacer.gif" width="10" height="11" border="0" alt=""></td></tr>
 	<tr>
-		<td width="190" class="summary_header_label">Active Inside Alarms</td>
-		<td width="170" class="summary_header_label">Active Outside Alarms</td>
-		<td width="200" colspan="2" class="summary_header_label">Active Rain Alarms</td>
-		<td width="200" colspan="2" class="summary_header_label">Active Extra Alarms</td>
+		<td width="190" class="summary_header_label">Extra Sensors</td>
+		<td width="170" class="summary_header">Current</td>
+		<td width="200" colspan="2" class="summary_header">Today's Highs</td>
+		<td width="200" colspan="2" class="summary_header">Today's Lows</td>
+	</tr>
+	<!-- START: EXTRA TEMPS -->
+	<tr><td colspan="6"><hr class="ThinLine"></td></tr>
+	<tr>
+		<td width="190" class="summary_data">Extra Temp 2</td>
+		<td width="170" class="summary_data">54.0 F</td>
+		<td width="100" class="summary_data">62.0 F</td>
+		<td width="100" class="summary_data">12:00 AM</td>
+		<td width="100" class="summary_data">54.0 F</td>
+		<td width="100" class="summary_data">5:57 AM</td>
 	</tr>
 	<tr>
-		<td width="190" class="summary_data_small"></td>
-		<td width="170" class="summary_data_small">Low outside temp alarm<br></td>
-		<td width="200" colspan="2" class="summary_data_small"></td>
-		<td width="200" colspan="2" class="summary_data_small"></td>
+		<td width="190" class="summary_data">Extra Temp 3</td>
+		<td width="170" class="summary_data">54.0 F</td>
+		<td width="100" class="summary_data">61.0 F</td>
+		<td width="100" class="summary_data">12:00 AM</td>
+		<td width="100" class="summary_data">54.0 F</td>
+		<td width="100" class="summary_data">6:09 AM</td>
 	</tr>
-	<!-- END: ALARM CONDITIONS -->
+	<tr>
+		<td width="190" class="summary_data">Extra Temp 4</td>
+		<td width="170" class="summary_data">53.0 F</td>
+		<td width="100" class="summary_data">62.0 F</td>
+		<td width="100" class="summary_data">12:00 AM</td>
+		<td width="100" class="summary_data">53.0 F</td>
+		<td width="100" class="summary_data">7:30 AM</td>
+	</tr>
+	<!-- END: EXTRA TEMPS -->
+
+	<!-- START: EXTRA HUMIDITY -->
 	<tr><td colspan="6"><hr class="ThinLine"></td></tr>
+	<tr>
+		<td width="190" class="summary_data">Extra Humidity 2</td>
+		<td width="170" class="summary_data">67%</td>
+		<td width="100" class="summary_data">87%</td>
+		<td width="100" class="summary_data">12:00 AM</td>
+		<td width="100" class="summary_data">67%</td>
+		<td width="100" class="summary_data">6:43 AM</td>
+	</tr>
+	<tr>
+		<td width="190" class="summary_data">Extra Humidity 3</td>
+		<td width="170" class="summary_data">66%</td>
+		<td width="100" class="summary_data">88%</td>
+		<td width="100" class="summary_data">12:00 AM</td>
+		<td width="100" class="summary_data">64%</td>
+		<td width="100" class="summary_data">5:24 AM</td>
+	</tr>
+	<!-- END: EXTRA HUMIDITY -->
+
+
+
+
+	<tr><td colspan="6"><hr class="ThinLine"></td></tr>
+
 
 	</table>
 	<!-- END: SUMMARY WEATHER DISPLAY -->
@@ -321,7 +347,7 @@ var iType;
 	<tr>
 		<td align="left" valign="top" width="50%">
 
-	<form name="frmUnits" method="post" action="/user/summary/index.php">
+	<form name="frmUnits" method="post" action="/user/stagpark/index.php">
 	View page units as:
 	<select name="selUnits" class="device" onChange="JavaScript:changeUnits();">
 <option value="0" SELECTED>Station Defaults</option>
@@ -352,15 +378,15 @@ var iType;
 <div class="Footer">
 	<div class="FooterLinks">
 		<a href="http://www.davisnet.com/about/index.asp" target="_blank">About Davis</a> |
-		<a href="http://www.davisnet.com/about/policies/privacy/" target="_blank">Privacy</a> |
-		<a href="http://www.davisnet.com/about/policies/terms/tos_wln_subscription.asp">FAQ's</a> |
+		<a href="privacy_corporate.php" target="_blank">Privacy</a> |
+		<a href="http://www.davisnet.com/support/weather/faq/">FAQ's</a> |
 		<a href="http://www.davisnet.com/contact/index.asp" target="_blank">Contact Us</a> |
 		<a href="http://www.davisnet.com/support/index.asp" target="_blank">Support</a> |
 		<a href="mailto:support@weatherlink.com?subject=WeatherLink+Website+Issue">Report Problems</a>
 	</div>
 	<div class="FooterText">
-		Copyright &copy; 2015 - Davis Instruments, Corp. - All Rights Reserved
-		- ver 1.14.10	</div>
+		Copyright &copy; 2016 - Davis Instruments, Corp. - All Rights Reserved
+		- ver 1.14.14	</div>
 
 </div>
 <!-- END: FOOTER -->

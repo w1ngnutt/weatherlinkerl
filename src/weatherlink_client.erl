@@ -42,31 +42,29 @@
 % hrly forecast //body/div/div/table/tr[4]/td/table/tr[1]/td/table/tr[24]/td/text()
 -define(temp_row,          8).
 -define(humid_row,         9).
--define(inside_temp_row,  11).
--define(inside_humit_row, 12).
--define(heat_index_row,   14).
--define(wind_chill_row,   15).
--define(dew_point_row,    16).
--define(barometer_row,    18).
--define(bar_trend_row,    19).
--define(wind_speed_row,   21).
--define(wind_speed_dir,   22).
--define(hourly_fcast_row, 24).
+-define(heat_index_row,   11).
+-define(wind_chill_row,   12).
+-define(dew_point_row,    13).
+-define(barometer_row,    15).
+-define(bar_trend_row,    16).
+-define(wind_speed_row,   18).
+-define(wind_speed_dir,   19).
+-define(hourly_fcast_row, 21).
 
 %% WIND
 % Name  |  2-min  |  10-min
 % avg wind      //body/div/div/table/tr[4]/td/table/tr[1]/td/table/tr[29]/td/text()
 % wind gust     //body/div/div/table/tr[4]/td/table/tr[1]/td/table/tr[30]/td/text()
--define(wind_avg_row,  29).
--define(wind_gust_row, 30).
+-define(wind_avg_row,  26).
+-define(wind_gust_row, 27).
 
 
 %% RAIN
 % Name | Rate | Day | Storm | Month | Year
 % rain       //body/div/div/table/tr[4]/td/table/tr[1]/td/table/tr[35]/td/text()
 % last hr    //body/div/div/table/tr[4]/td/table/tr[1]/td/table/tr[36]/td/text()
--define(rain_row,         35).
--define(rain_last_hr_row, 36).
+-define(rain_row,         32).
+-define(rain_last_hr_row, 33).
 
 
 %% ALARMS
@@ -195,12 +193,19 @@ to_int(S) ->
 -ifdef(TEST).
 -include_lib("eunit/include/eunit.hrl").
 
--define(sample1, lists:flatten(code:priv_dir(?APP) ++ "/summary-sample.html")).
--define(sample2, lists:flatten(code:priv_dir(?APP) ++ "/summary-sample-no-alarm.html")).
+% -define(sample1, lists:flatten(code:priv_dir(?APP) ++ "/summary-sample.html")).
+% -define(sample2, lists:flatten(code:priv_dir(?APP) ++ "/summary-sample-no-alarm.html")).
 
 load_test() ->
-    {ok, F} = file:read_file(?sample1),
-    {ok, F2} = file:read_file(?sample2),
+    {ok, F1} = file:read_file(?sample1),
+    % {ok, F2} = file:read_file(?sample2),
+    Body1 = parse_body(F1),
+    % Body2 = parse_body(F2),
+
+    _Temp1 = temp(Body1),
+    _Rain1 = rain(Body1),
+    _Wind1 = wind(Body1),
+
     ok.
     
 
